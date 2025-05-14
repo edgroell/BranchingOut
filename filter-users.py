@@ -10,8 +10,11 @@ def filter_users_by_name(users: list, name: str) -> None:
     """
     filtered_users = [user for user in users if user["name"].lower() == name.lower()]
 
-    for user in filtered_users:
-        print(user)
+    if filtered_users:
+        for user in filtered_users:
+            print(user)
+    else:
+        print("No user found")
 
 
 def filter_by_age(users: list, age: int) -> None:
@@ -23,8 +26,11 @@ def filter_by_age(users: list, age: int) -> None:
     """
     filtered_users = [user for user in users if user["age"] == age]
 
-    for user in filtered_users:
-        print(user)
+    if filtered_users:
+        for user in filtered_users:
+            print(user)
+    else:
+        print("No user found")
 
 
 def filter_by_email(users: list, email: str) -> None:
@@ -36,8 +42,11 @@ def filter_by_email(users: list, email: str) -> None:
     """
     filtered_users = [user for user in users if user["email"] == email]
 
-    for user in filtered_users:
-        print(user)
+    if filtered_users:
+        for user in filtered_users:
+            print(user)
+    else:
+        print("No user found")
 
 
 def dispatch_filter_by_name(users) -> None:
