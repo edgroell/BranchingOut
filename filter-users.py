@@ -56,8 +56,12 @@ def dispatch_filter_by_age(users) -> None:
     :param users: list containing all users' data.
     :return: None
     """
-    age_to_search = int(input("Enter an age to filter users: ").strip())
-    filter_by_age(users, age_to_search)
+    while True:
+        try:
+            age_to_search = int(input("Enter an age to filter users: ").strip())
+            return filter_by_age(users, age_to_search)
+        except ValueError:
+            print("Please enter a valid number.")
 
 
 def dispatch_filter_by_email(users: list) -> None:
